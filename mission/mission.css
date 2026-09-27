@@ -1,14 +1,27 @@
 body {
     margin: 0;
-    background: white;
+    background-color: white;
     color: #111;
     font-family: Georgia, "Times New Roman", serif;
+}
+
+.theme-control {
+    box-sizing: border-box;
+    max-width: 920px;
+    margin: 30px auto 0;
+    text-align: right;
+    font-family: Arial, sans-serif;
+}
+
+#theme-select {
+    padding: 6px;
+    font-size: 16px;
 }
 
 .mission-page {
     box-sizing: border-box;
     max-width: 920px;
-    margin: 50px auto;
+    margin: 20px auto 50px;
     padding: 80px 40px 55px;
     border: 1px solid #aaa;
 }
@@ -73,7 +86,33 @@ footer img {
     max-width: 100%;
 }
 
+/* Dark theme */
+
+body.dark {
+    background-color: #333;
+    color: white;
+}
+
+body.dark .mission-page {
+    background-color: #333;
+    border-color: #777;
+}
+
+body.dark header {
+    border-bottom-color: #777;
+}
+
+body.dark .university-name {
+    color: white;
+}
+
+/* Small screens */
+
 @media (max-width: 650px) {
+    .theme-control {
+        margin: 15px 15px 0;
+    }
+
     .mission-page {
         margin: 15px;
         padding: 40px 22px;
