@@ -27,13 +27,14 @@ h1 {
   cursor: pointer;
 }
 
-nav {
-  display: none;
-}
-
 nav a {
   color: white;
   padding: 1rem;
+  display: block;
+}
+
+.hide {
+  display: none;
 }
 
 main {
@@ -58,6 +59,7 @@ h2 {
   object-fit: cover;
   display: block;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 footer {
@@ -67,6 +69,30 @@ footer {
   padding: 1rem;
   margin-top: 1rem;
 }
+
+/* Modal */
+
+dialog {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .75);
+}
+
+dialog img {
+  width: 90%;
+  display: block;
+  margin: 20vh auto;
+}
+
+.close-viewer {
+  position: absolute;
+  top: 10vh;
+  right: 2vh;
+  padding: 3px 6px;
+  font-size: 1.5em;
+}
+
+/* Larger screens */
 
 @media screen and (min-width: 700px) {
   .gallery {
@@ -79,12 +105,24 @@ footer {
 
   nav {
     display: block;
-    margin-top: 1rem;
+  }
+
+  nav a {
+    display: inline;
   }
 }
 
 @media screen and (min-width: 1000px) {
   .gallery {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  dialog img {
+    width: 60%;
+    margin: 15vh auto;
+  }
+
+  .close-viewer {
+    right: 15vh;
   }
 }
