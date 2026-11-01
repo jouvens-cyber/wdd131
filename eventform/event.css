@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #bfd1dd;
+  margin: 0;
+  color: #111;
+}
+
+.wrapper {
+  max-width: 850px;
+  margin: 50px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 15px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 20px 0 30px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.full {
+  grid-column: 1 / -1;
+}
+
+label {
+  font-size: 1rem;
+}
+
+input,
+select,
+button {
+  padding: 12px;
+  font: inherit;
+  width: 100%;
+}
+
+input,
+select {
+  border: 1px solid #888;
+  border-radius: 3px;
+}
+
+button {
+  background: #bfd1dd;
+  border: 2px solid #333;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+button:hover {
+  background: #a9c1d0;
+}
+
+#extraField {
+  border: 2px solid #d9a066;
+  padding: 10px;
+}
+
+#extraField[hidden] {
+  display: none;
+}
+
+#output {
+  margin-top: 20px;
+}
+
+.error {
+  color: #b00020;
+  font-weight: bold;
+}
+
+.ticket {
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    margin: 20px 10px;
+    padding: 20px;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  .full {
+    grid-column: 1;
+  }
+}
