@@ -179,3 +179,13 @@ footer {
         justify-content: space-between;
     }
 }
+
+.recipe-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+}
+
+.recipe-details {
+    min-width: 0;
+}
